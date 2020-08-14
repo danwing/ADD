@@ -451,22 +451,23 @@ Host--(  Network#A  CPE----CPE---(   ISP   )--- DNS Server
             this 8-bit field is shown in <xref target="types"></xref>. <figure
                 align="center" anchor="types" title="Encrypted DNS Types">
                 <artwork align="center"><![CDATA[+-+-+-+-+-+-+-+-+
-|U|U|U|U|U|Q|H|T|
+|x|x|x|x|x|Q|H|T|
 +-+-+-+-+-+-+-+-+  ]]></artwork>
-              </figure><list style="empty">
-                <t>T: If set, this bit indicates that the server supports DoT
+              </figure><list style="hanging" hangIndent="4">
+                <t hangText="T:">If set, this bit indicates that the server supports DoT                                                                        
                 <xref target="RFC7858"></xref>.</t>
 
-                <t>H: If set, this bit indicates that the server supports DoH
+                <t hangText="H:">If set, this bit indicates that the server supports DoH                                                                        
                 <xref target="RFC8484"></xref>.</t>
 
-                <t>Q: If set, this bit indicates that the server supports DoQ
+                <t hangText="Q:">If set, this bit indicates that the server supports DoQ                                                                        
                 <xref target="I-D.ietf-dprive-dnsoquic"></xref>.</t>
 
-                <t>U: Unassigned bits. These bits MUST be unset by the sender.
-                Associating a meaning with an unassigned bit can be done via
+                <t hangText="x:">Unassigned bits. These bits MUST be unset by the sender.                                                                       
+                Associating a meaning with an unassigned bit can be done via                                                                                    
                 Standards Action <xref target="RFC8126"></xref>.</t>
-              </list>In a request, these bits are assigned to indicate the
+              </list>      
+                 In a request, these bits are assigned to indicate the
             requested encrypted DNS server type(s) by the client. In a
             response, these bits are set as a function of the encrypted DNS
             supported by the server and the requested encrypted DNS server
